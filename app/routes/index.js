@@ -43,6 +43,7 @@ router.post("/items", (req, res) => {
 
 // PUT - update item by id
 router.put("/items/:id", (req, res) => {
+  // convert the string id to a number
   const id = parseInt(req.params.id);
   const item = items.find((i) => i.id === id);
 
